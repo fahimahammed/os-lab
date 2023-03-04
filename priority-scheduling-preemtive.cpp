@@ -15,7 +15,6 @@ struct process {
     int tat; // turnaround time
 };
 
-// Custom comparator for priority queue
 struct compare {
     bool operator()(const process& p1, const process& p2) {
         return p1.pt > p2.pt;
