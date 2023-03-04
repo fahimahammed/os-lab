@@ -59,10 +59,20 @@ void findavgTime(int processes[], int n, int bt[], int quantum)
 } 
 int main() 
 { 
-	int processes[] = { 1, 2, 3, 4}; 
-	int n = sizeof processes / sizeof processes[0]; 
-	int burst_time[] = {5, 4, 1, 6}; 
-	int quantum = 2; 
+	// int processes[] = { 1, 2, 3, 4}; 
+	// int n = sizeof processes / sizeof processes[0]; 
+	// int burst_time[] = {5, 4, 1, 6}; 
+	// int quantum = 2; 
+    int n;
+    cout<<"Enter the number of processes: ";
+    cin>>n;
+    int processes[n], burst_time[n], quantum;
+    for(int i=0; i<n; i++){
+        cout<<"Enter the burst time for P"<<i+1<<": ";
+        cin>>burst_time[i];
+    }
+    cout<<"Enter the time quantum: ";
+    cin>>quantum;
 	findavgTime(processes, n, burst_time, quantum); 
 	return 0; 
 } 
